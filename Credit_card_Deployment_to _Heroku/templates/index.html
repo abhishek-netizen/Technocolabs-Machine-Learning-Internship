@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Age of Marriage Prediction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style type="text/css">
+*{margin:0;padding:0;box-sizing:border-box}body,html{height:100%;font-family:Poppins-Regular,sans-serif}a{font-family:Poppins-Regular;font-size:14px;line-height:1.7;color:#666;margin:0;transition:all .4s;-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s}a:focus{outline:0!important}a:hover{text-decoration:none}h1,h2,h3,h4,h5,h6{margin:0}input{outline:0;border:none}input:focus::-webkit-input-placeholder{color:transparent}input:focus:-moz-placeholder{color:transparent}input:focus::-moz-placeholder{color:transparent}input:focus:-ms-input-placeholder{color:transparent}input::-webkit-input-placeholder{color:#adadad}input:-moz-placeholder{color:#adadad}input::-moz-placeholder{color:#adadad}input:-ms-input-placeholder{color:#adadad}button{outline:0!important;border:none;background:0 0}button:hover{cursor:pointer}.container{max-width:1200px}.container-contact100{width:100%;min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding:15px;background:#a64bf4;background:-webkit-linear-gradient(45deg,#00dbde,#fc00ff);background:-o-linear-gradient(45deg,#00dbde,#fc00ff);background:-moz-linear-gradient(45deg,#00dbde,#fc00ff);background:linear-gradient(45deg,#00dbde,#fc00ff)}.wrap-contact100{width:500px;background:#fff;border-radius:10px;overflow:hidden;padding:42px 55px 45px 55px}.contact100-form{width:100%}.contact100-form-title{display:block;font-family:Poppins-Bold;font-size:39px;color:#333;line-height:1.2;text-align:center;padding-bottom:10px}.wrap-input100{width:100%;position:relative;border-bottom:2px solid #d9d9d9;padding-bottom:10px;margin-bottom:15px}.input100{display:block;width:100%;background:0 0;font-family:Poppins-Medium;font-size:18px;color:#333;line-height:1.2;padding:0 5px}.focus-input100{position:absolute;display:block;width:100%;height:100%;top:0;left:0;pointer-events:none}.focus-input100::before{content:"";display:block;position:absolute;bottom:-2px;left:0;width:0;height:2px;-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s;transition:all .4s;background:#7f7f7f}input.input100{height:40px}.input100:focus+.focus-input100::before{width:100%}.has-val.input100+.focus-input100::before{width:100%}.container-contact100-form-btn{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-wrap:wrap;justify-content:center;padding-top:13px}.wrap-contact100-form-btn{width:100%;display:block;position:relative;z-index:1;border-radius:25px;overflow:hidden;margin:0 auto}.contact100-form-bgbtn{position:absolute;z-index:-1;width:300%;height:100%;background:#a64bf4;background:-webkit-linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);background:-o-linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);background:-moz-linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);background:linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);top:0;left:-100%;-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s;transition:all .4s}.contact100-form-btn{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;justify-content:center;align-items:center;padding:0 20px;width:100%;height:50px;font-family:Poppins-Medium;font-size:16px;color:#fff;line-height:1.2}.wrap-contact100-form-btn:hover .contact100-form-bgbtn{left:0}.contact100-form-btn i{-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s;transition:all .4s}.contact100-form-btn:hover i{-webkit-transform:translateX(10px);-moz-transform:translateX(10px);-ms-transform:translateX(10px);-o-transform:translateX(10px);transform:translateX(10px)}@media (max-width:576px){.wrap-contact100{padding:72px 15px 65px 15px}}.wrap-contact100{width:800px;background:#fff;border-radius:10px;overflow:hidden;padding:42px 55px 45px 55px}.contact100-form-title{font-size:26px}
+</style>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="POST" action="/" >
+				<span class="contact100-form-title" style="font-size:32px">Credit Card Default/Not-Default Prediction.</span>
+				<span class="contact100-form-title" id="output" style="color: #ff0000;" >&nbsp;</span>
+
+				<div class="wrap-input100 " >
+					<span class="label-input100">Credit card balance limit</span>
+					<input class="input100" id="yob" name="LIMIT_BAL" placeholder="Amount of the credit provided for the card holder ex: 50000">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 " >
+					<span class="label-input100">Type of Education</span>
+					<input class="input100" id="height_cms" name="EDUCATION" placeholder="  Education (1 = graduate school; 2 = university; 3 = high school; 4 = others) ">
+					<span class="focus-input100"></span>
+				</div>
+
+				<!--<div class="wrap-input100 " >
+					<span class="label-input100">Type of Education</span>
+					<select  class="input100" id="gender" name="EDUCATION" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+							<option value="">Select Education type</option>
+							<option value="1">Graduation School</option>
+							<option value="2">University</option>
+              <option value="3">High School</option>
+              <option value="4">Others</option>
+						</select>
+					<span class="focus-input100"></span>
+				</div>-->
+
+        <div class="wrap-input100 " >
+					<span class="label-input100">Marital status</span>
+					<input class="input100" id="height_cms" name="MARRIAGE" placeholder="  Marital status (1 = married; 2 = single; 3 = others).">
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<!--<div class="wrap-input100" style="border-bottom: 0px;" >
+					<span class="label-input100">Marital status</span>
+						<select  class="input100" id="religion" name="MARRIAGE" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+							<option value="">Select Marital status</option>
+							<option value="1">Married</option>
+							<option value="2">Single</option>
+							<option value="3">Others</option>
+						</select>
+					<span class="focus-input100"></span>
+				</div>-->
+
+
+        <div class="wrap-input100 " >
+					<span class="label-input100">Age</span>
+					<input class="input100" id="height_cms" name="AGE" placeholder=" current age of the card holder">
+					<span class="focus-input100"></span>
+				</div>
+
+        <div class="wrap-input100 " >
+					<span class="label-input100">Repayment status in September</span>
+					<input class="input100" id="height_cms" name="PAY_1" placeholder="-2 = not used; -1 = pay duly; 0 = min amt paid; 1 = payment delay for 1 month, so on up to 12.">
+					<span class="focus-input100"></span>
+				</div>
+
+
+
+        <!--<div class="wrap-input100" style="border-bottom: 0px;" >
+					<span class="label-input100">Repayment status in September</span>
+						<select  class="input100" id="religion" name="MARRIAGE" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+							<option value="">Select Repayment status</option>
+							<option value="-2">Not Used</option>
+              <option value="-1">Pay duly</option>
+							<option value="0">Minimum amt paid</option>
+							<option value="1">Delay for 1 month</option>
+              <option value="2">Delay for 2 month</option>
+              <option value="3">Delay for 3 month</option>
+              <option value="4">Delay for 4 month</option>
+              <option value="5">Delay for 5 month</option>
+              <option value="6">Delay for 6 month</option>
+              <option value="7">Delay for 7 month</option>
+              <option value="8">Delay for 8 month</option>
+              <option value="9">Delay for 9 month</option>
+              <option value="10">Delay for 10 month</option>
+              <option value="11">Delay for 11 month</option>
+              <option value="12">Delay for 12 month</option>
+						</select>
+					<span class="focus-input100"></span>
+				</div>-->
+
+
+
+
+
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Bill statement amount in September</span>
+          <input class="input100" id="height_cms" name="BILL_AMT1" placeholder=" Bill amount ex: 3913 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Bill statement amount in August</span>
+          <input class="input100" id="height_cms" name="BILL_AMT2" placeholder=" Bill amount ex: 3102 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Bill statement amount in July</span>
+          <input class="input100" id="height_cms" name="BILL_AMT3" placeholder=" Bill amount ex: 689 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Bill statement amount in June</span>
+          <input class="input100" id="height_cms" name="BILL_AMT4" placeholder=" Bill amount ex: 3272 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Bill statement amount in May</span>
+          <input class="input100" id="height_cms" name="BILL_AMT5" placeholder=" Bill amount ex: 3455 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Bill statement amount in April</span>
+          <input class="input100" id="height_cms" name="BILL_AMT6" placeholder=" Bill amount ex: 3261 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Amount paid in September</span>
+          <input class="input100" id="height_cms" name="PAY_AMT1" placeholder="Amount paid in September ex: 2000 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Amount paid in August</span>
+          <input class="input100" id="height_cms" name="PAY_AMT2" placeholder="Amount paid in August ex: 689 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Amount paid in July</span>
+          <input class="input100" id="height_cms" name="PAY_AMT3" placeholder="Amount paid in July ex: 1000 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Amount paid in June</span>
+          <input class="input100" id="height_cms" name="PAY_AMT4" placeholder="Amount paid in June ex: 1100 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Amount paid in May</span>
+          <input class="input100" id="height_cms" name="PAY_AMT5" placeholder="Amount paid in May ex: 1069 ">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 " >
+          <span class="label-input100">Amount paid in April</span>
+          <input class="input100" id="height_cms" name="PAY_AMT6" placeholder="Amount paid in May ex: 2000 ">
+          <span class="focus-input100"></span>
+        </div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn" id='submit' type="submit" value="Submit">Submit</button>
+					</div>
+
+
+
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
