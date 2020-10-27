@@ -4,6 +4,8 @@ Internship Details : Internship Type: Remote (work from Home) Internship Duratio
 Click link for Credit Card Deployment On Heroku:
  https://card-holder.herokuapp.com/
  
+[[[Screenshot.jpeg]]][1]
+[1]:  https://card-holder.herokuapp.com/
  
 
  
