@@ -2,10 +2,8 @@
 Internship Details : Internship Type: Remote (work from Home) Internship Duration: 30 Days ( 1 Month ) Profile: Machine Learning Developer
 
 Click link for Credit Card Deployment On Heroku:
- https://card-holder.herokuapp.com/
- 
-[[[Screenshot.jpeg]]][1]
-[1]:  https://card-holder.herokuapp.com/
+
+[![deploy](Screenshot.jpeg)](https://card-holder.herokuapp.com/)
  
 
  
